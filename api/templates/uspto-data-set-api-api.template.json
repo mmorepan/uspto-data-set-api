@@ -12,6 +12,7 @@
       "type": "object"
     }
   },
+  "variables": {},
   "resources": [
     {
       "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api')]",
@@ -219,8 +220,7 @@
               {
                 "contentType": "application/json",
                 "schemaId": "5f17393ca6ad26110cdf46e8",
-                "typeName": "-dataset--version-RecordsPost200ApplicationJsonResponse",
-                "generatedSample": "[\r\n  {}\r\n]"
+                "typeName": "-dataset--version-RecordsPost200ApplicationJsonResponse"
               }
             ],
             "headers": []
@@ -417,5 +417,6 @@
       },
       "condition": "[equals(parameters('ApimServiceName'), 'APIMNGR-genesis-prod')]"
     }
-  ]
+  ],
+  "outputs": {}
 }
