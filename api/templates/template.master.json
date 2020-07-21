@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "metadata": {
+        "description": "Name of the API Management"
+      },
+      "type": "string"
+    },
+    "LinkedTemplatesBaseUrl": {
+      "metadata": {
+        "description": "Base URL of the repository that contains the generated templates"
+      },
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "metadata": {
+        "description": "Base URL of the repository that contains the generated policy files"
+      },
+      "type": "string"
+    },
+    "NamedValues": {
+      "metadata": {
+        "description": "Named values"
+      },
+      "type": "object"
+    },
+    "ApiLoggerId": {
+      "metadata": {
+        "description": "LoggerId for this api"
+      },
+      "type": "object"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "name": "apisTemplate",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2018-05-01",
+      "dependsOn": [],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[concat(parameters('LinkedTemplatesBaseUrl'), '/uspto-data-set-api-api.template.json')]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "ApimServiceName": {
+            "allowedValues": [],
+            "value": "[parameters('ApimServiceName')]"
+          },
+          "PolicyXMLBaseUrl": {
+            "allowedValues": [],
+            "value": "[parameters('PolicyXMLBaseUrl')]"
+          },
+          "ApiLoggerId": {
+            "allowedValues": [],
+            "value": "[parameters('ApiLoggerId')]"
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {}
+}
