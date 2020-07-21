@@ -33,7 +33,6 @@
       "type": "object"
     }
   },
-  "variables": {},
   "resources": [
     {
       "name": "apisTemplate",
@@ -62,6 +61,5 @@
         }
       }
     }
-  ],
-  "outputs": {}
+  ]
 }
