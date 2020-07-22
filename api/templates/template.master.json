@@ -38,6 +38,12 @@
       },
       "type": "string"
     },
+    "ProductsApiName": {
+      "metadata": {
+        "description": "Products Api name"
+      },
+      "type": "object"
+    },
     "ApiLoggerId": {
       "metadata": {
         "description": "LoggerId for this api"
@@ -74,6 +80,10 @@
           "OauthServerId": {
             "allowedValues": [],
             "value": "[parameters('OauthServerId')]"
+          },
+          "ProductsApiName": {
+            "allowedValues": [],
+            "value": "[parameters('ProductsApiName')]"
           },
           "BackendServiceUrl": {
             "allowedValues": [],

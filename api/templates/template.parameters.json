@@ -20,6 +20,11 @@
     "OauthServerId": {
       "value": "<To be completed by Azure DevOps Pipeline>"
     },
+    "ProductsApiName": {
+      "value": {
+        "demoarm1": "<To be completed by Azure DevOps Pipeline>"
+      }
+    },
     "ApiLoggerId": {
       "value": {
         "apilog": {

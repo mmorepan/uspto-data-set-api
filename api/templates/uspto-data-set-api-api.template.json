@@ -332,6 +332,14 @@
       }
     },
     {
+      "name": "[concat(parameters('ApimServiceName'), '/', parameters('ProductsApiName').demoarm1, '/', 'uspto-data-set-api')]",
+      "type": "Microsoft.ApiManagement/service/products/apis",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service/apis', parameters('ApimServiceName'), 'uspto-data-set-api')]"
+      ]
+    },
+    {
       "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/applicationinsights')]",
       "type": "Microsoft.ApiManagement/service/apis/diagnostics",
       "apiVersion": "2019-01-01",
