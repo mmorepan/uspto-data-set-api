@@ -5,6 +5,9 @@
     "ApimServiceName": {
       "value": "APIMNGR-genesis-dev"
     },
+    "BackendServiceUrl": {
+      "value": "https://example.com"
+    },
     "LinkedTemplatesBaseUrl": {
       "value": ""
     },

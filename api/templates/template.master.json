@@ -8,6 +8,12 @@
       },
       "type": "string"
     },
+    "BackendServiceUrl": {
+      "metadata": {
+        "description": "Backend service url"
+      },
+      "type": "string"
+    },
     "LinkedTemplatesBaseUrl": {
       "metadata": {
         "description": "Base URL of the repository that contains the generated templates"
@@ -68,6 +74,10 @@
           "OauthServerId": {
             "allowedValues": [],
             "value": "[parameters('OauthServerId')]"
+          },
+          "BackendServiceUrl": {
+            "allowedValues": [],
+            "value": "[parameters('BackendServiceUrl')]"
           }
         }
       }
