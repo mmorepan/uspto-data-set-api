@@ -9,7 +9,7 @@
       "type": "string"
     },
     "NamedValues": {
-      "type": "string"
+      "type": "object"
     }
   },
   "variables": {},

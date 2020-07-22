@@ -16,6 +16,9 @@
 		<set-header name="my-header" exists-action="override">
 			<value>{{demoarm-uri}}</value>
 		</set-header>
+		<set-header name="my-header-2" exists-action="override">
+			<value>{{demoarm-uri}}</value>
+		</set-header>
 	</inbound>
 	<backend>
 		<base />
