@@ -22,8 +22,8 @@
     },
     "ProductsApiName": {
       "value": {
-        "demoarm1": "<To be completed by Azure DevOps Pipeline>",
-        "demopetstoreproduct": "<To be completed by Azure DevOps Pipeline>"
+        "demoarm1": "product_demoarm1_to_be_completed",
+        "demopetstoreproduct": "product_demopetstoreproduct_to_be_completed"
       }
     },
     "ApiLoggerId": {
