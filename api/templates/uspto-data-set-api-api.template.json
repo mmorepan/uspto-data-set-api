@@ -16,6 +16,9 @@
     },
     "OauthServerId": {
       "type": "string"
+    },
+    "ProductsApiName": {
+      "type": "object"
     }
   },
   "variables": {},
