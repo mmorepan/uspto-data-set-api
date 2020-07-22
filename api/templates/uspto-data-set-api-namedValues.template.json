@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "ApimServiceName": {
+      "type": "string"
+    },
+    "PolicyXMLBaseUrl": {
+      "type": "string"
+    },
+    "NamedValues": {
+      "type": "string"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "name": "[concat(parameters('ApimServiceName'), '/demoarm-uri')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [],
+      "properties": {
+        "displayName": "demoarm-uri",
+        "value": "[parameters('NamedValues').demoarmuri]",
+        "tags": [],
+        "secret": false
+      }
+    },
+    {
+      "name": "[concat(parameters('ApimServiceName'), '/demoarm-id-jwt-openid-config-url')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [],
+      "properties": {
+        "displayName": "demoarm-id-jwt-openid-config-url",
+        "value": "[parameters('NamedValues').demoarmidjwtopenidconfigurl]",
+        "tags": [],
+        "secret": false
+      }
+    },
+    {
+      "name": "[concat(parameters('ApimServiceName'), '/demoarm-app-jwt-audience')]",
+      "type": "Microsoft.ApiManagement/service/properties",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [],
+      "properties": {
+        "displayName": "demoarm-app-jwt-audience",
+        "value": "[parameters('NamedValues').demoarmappjwtaudience]",
+        "tags": [],
+        "secret": false
+      }
+    }
+  ],
+  "outputs": {}
+}

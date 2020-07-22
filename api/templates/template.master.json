@@ -54,10 +54,39 @@
   "variables": {},
   "resources": [
     {
-      "name": "apisTemplate",
+      "name": "namedValuesTemplate",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2018-05-01",
       "dependsOn": [],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "[concat(parameters('LinkedTemplatesBaseUrl'), '/uspto-data-set-api-namedValues.template.json')]",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+          "ApimServiceName": {
+            "allowedValues": [],
+            "value": "[parameters('ApimServiceName')]"
+          },
+          "PolicyXMLBaseUrl": {
+            "allowedValues": [],
+            "value": "[parameters('PolicyXMLBaseUrl')]"
+          },
+          "NamedValues": {
+            "allowedValues": [],
+            "value": "[parameters('NamedValues')]"
+          }
+        }
+      }
+    },
+    {
+      "name": "apisTemplate",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2018-05-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'namedValuesTemplate')]"
+      ],
       "properties": {
         "mode": "Incremental",
         "templateLink": {

@@ -155,6 +155,18 @@
       "resources": []
     },
     {
+      "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/list-data-sets/policy')]",
+      "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service/apis/operations', parameters('ApimServiceName'), 'uspto-data-set-api', 'list-data-sets')]"
+      ],
+      "properties": {
+        "format": "rawxml-link",
+        "value": "[concat(parameters('PolicyXMLBaseUrl'), '/uspto-data-set-api-list-data-sets-operationPolicy.xml')]"
+      }
+    },
+    {
       "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/list-data-sets/metadata')]",
       "type": "Microsoft.ApiManagement/service/apis/operations/tags",
       "apiVersion": "2019-01-01",
@@ -250,6 +262,18 @@
       "resources": []
     },
     {
+      "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/perform-search/policy')]",
+      "type": "Microsoft.ApiManagement/service/apis/operations/policies",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service/apis/operations', parameters('ApimServiceName'), 'uspto-data-set-api', 'perform-search')]"
+      ],
+      "properties": {
+        "format": "rawxml-link",
+        "value": "[concat(parameters('PolicyXMLBaseUrl'), '/uspto-data-set-api-perform-search-operationPolicy.xml')]"
+      }
+    },
+    {
       "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/perform-search/search')]",
       "type": "Microsoft.ApiManagement/service/apis/operations/tags",
       "apiVersion": "2019-01-01",
@@ -332,6 +356,18 @@
       ],
       "properties": {
         "displayName": "metadata"
+      }
+    },
+    {
+      "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/policy')]",
+      "type": "Microsoft.ApiManagement/service/apis/policies",
+      "apiVersion": "2019-01-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.ApiManagement/service/apis', parameters('ApimServiceName'), 'uspto-data-set-api')]"
+      ],
+      "properties": {
+        "format": "rawxml-link",
+        "value": "[concat(parameters('PolicyXMLBaseUrl'), '/uspto-data-set-api-apiPolicy.xml')]"
       }
     },
     {

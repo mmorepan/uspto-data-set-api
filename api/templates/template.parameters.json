@@ -15,7 +15,11 @@
       "value": ""
     },
     "NamedValues": {
-      "value": {}
+      "value": {
+        "demoarmuri": "<To be completed by Azure DevOps Pipeline>",
+        "demoarmidjwtopenidconfigurl": "<To be completed by Azure DevOps Pipeline>",
+        "demoarmappjwtaudience": "<To be completed by Azure DevOps Pipeline>"
+      }
     },
     "OauthServerId": {
       "value": "<To be completed by Azure DevOps Pipeline>"
