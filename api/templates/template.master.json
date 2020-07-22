@@ -26,6 +26,12 @@
       },
       "type": "object"
     },
+    "OauthServerId": {
+      "metadata": {
+        "description": "Oauth2 Autorization Server Id"
+      },
+      "type": "string"
+    },
     "ApiLoggerId": {
       "metadata": {
         "description": "LoggerId for this api"
@@ -38,7 +44,7 @@
     {
       "name": "apisTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2018-01-01",
+      "apiVersion": "2018-05-01",
       "dependsOn": [],
       "properties": {
         "mode": "Incremental",
@@ -58,6 +64,10 @@
           "ApiLoggerId": {
             "allowedValues": [],
             "value": "[parameters('ApiLoggerId')]"
+          },
+          "OauthServerId": {
+            "allowedValues": [],
+            "value": "[parameters('OauthServerId')]"
           }
         }
       }

@@ -10,6 +10,9 @@
     },
     "ApiLoggerId": {
       "type": "object"
+    },
+    "OauthServerId": {
+      "type": "string"
     }
   },
   "variables": {},
@@ -29,7 +32,11 @@
         "protocols": [
           "https"
         ],
-        "authenticationSettings": {},
+        "authenticationSettings": {
+          "oAuth2": {
+            "authorizationServerId": "[parameters('OauthServerId')]"
+          }
+        },
         "subscriptionKeyParameterNames": {
           "header": "Ocp-Apim-Subscription-Key",
           "query": "subscription-key"
@@ -219,9 +226,9 @@
             "representations": [
               {
                 "contentType": "application/json",
+                "sample": "[[\r\n  {}\r\n]",
                 "schemaId": "5f17393ca6ad26110cdf46e8",
-                "typeName": "-dataset--version-RecordsPost200ApplicationJsonResponse",
-                "sample": "[[\r\n  {}\r\n]"
+                "typeName": "-dataset--version-RecordsPost200ApplicationJsonResponse"
               }
             ],
             "headers": []
