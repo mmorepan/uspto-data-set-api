@@ -220,7 +220,8 @@
               {
                 "contentType": "application/json",
                 "schemaId": "5f17393ca6ad26110cdf46e8",
-                "typeName": "-dataset--version-RecordsPost200ApplicationJsonResponse"
+                "typeName": "-dataset--version-RecordsPost200ApplicationJsonResponse",
+                "sample": "[[\r\n  {}\r\n]"
               }
             ],
             "headers": []
@@ -288,8 +289,7 @@
               {
                 "contentType": "application/json",
                 "schemaId": "5f17393ca6ad26110cdf46e8",
-                "typeName": "-dataset--version-FieldsGet200ApplicationJsonResponse",
-                "generatedSample": "string"
+                "typeName": "-dataset--version-FieldsGet200ApplicationJsonResponse"
               }
             ],
             "headers": []
@@ -301,8 +301,7 @@
               {
                 "contentType": "application/json",
                 "schemaId": "5f17393ca6ad26110cdf46e8",
-                "typeName": "-dataset--version-FieldsGet404ApplicationJsonResponse",
-                "generatedSample": "string"
+                "typeName": "-dataset--version-FieldsGet404ApplicationJsonResponse"
               }
             ],
             "headers": []
