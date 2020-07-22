@@ -38,7 +38,7 @@
     {
       "name": "apisTemplate",
       "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2018-01-01",
+      "apiVersion": "2018-05-01",
       "dependsOn": [],
       "properties": {
         "mode": "Incremental",
