@@ -340,7 +340,8 @@
       "apiVersion": "2019-01-01",
       "dependsOn": [
         "[resourceId('Microsoft.ApiManagement/service/apis', parameters('ApimServiceName'), 'uspto-data-set-api')]"
-      ]
+      ],
+      "properties": {}
     },
     {
       "name": "[concat(parameters('ApimServiceName'), '/uspto-data-set-api/applicationinsights')]",
